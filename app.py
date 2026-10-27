@@ -1,5 +1,4 @@
 #! C:\Users\Asus\Bank_Cust_Deposit\venv\Scripts\python.exe
-
 import streamlit as st
 import pandas as pd
 import joblib
@@ -12,7 +11,7 @@ def load_model():
 model = load_model()
 
 st.title("Bank Term Deposit Predictor")
-st.markdown("Predict whether a customer will subscribe to a term deposit based on campaign data.")
+st.markdown("Predict whether a customer will subscribe to a term deposit based on campaign data and socioeconomic indicators.")
 
 # Interactive Threshold Tuner
 st.sidebar.header("Decision Settings")
@@ -38,13 +37,13 @@ with st.form("customer_form"):
         loan = st.selectbox("Has Personal Loan?", ['no', 'yes', 'unknown'])
         contact = st.selectbox("Contact Communication Type", ['cellular', 'telephone'])
         month = st.selectbox("Last Contact Month", ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'])
-        day_of_week = st.selectbox("Last Contact Day", ['mon', 'tue', 'wed', 'thu', 'fri'])
+        day_of_week = st.selectbox("Last Contact Day of Week", ['mon', 'tue', 'wed', 'thu', 'fri'])
     
     st.subheader("Campaign History")
     col3, col4 = st.columns(2)
     with col3:
         campaign = st.number_input("Contacts during this campaign", min_value=1, value=1)
-        pdays = st.number_input("Days since last contact (999=never)", value=999)
+        pdays = st.number_input("Days since last contact (999 = never)", value=999)
     with col4:
         previous = st.number_input("Contacts before this campaign", min_value=0, value=0)
         poutcome = st.selectbox("Previous Campaign Outcome", ['failure', 'nonexistent', 'success'])
