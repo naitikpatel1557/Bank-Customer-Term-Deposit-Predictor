@@ -1,8 +1,6 @@
 # Bank Customer Term Deposit Predictor 🏦📊
 
-A complete machine learning pipeline and interactive web application built to predict whether a bank customer will subscribe to a term deposit based on historical campaign data, demographics, and macroeconomic indicators. 
-
-Developed as part of an internship initiative at Brainybeam Technology.
+A complete machine learning pipeline and interactive web application built to predict whether a bank customer will subscribe to a term deposit based on historical campaign data, demographics, and macroeconomic indicators.
 
 ## 📌 Project Overview
 Bank telemarketing campaigns are expensive and time-consuming. Calling every customer is inefficient. This project solves that business problem by using artificial intelligence to identify high-probability leads *before* a call is made. By focusing only on customers likely to convert, financial institutions can optimize their marketing budgets, save time, and increase overall conversion rates.
