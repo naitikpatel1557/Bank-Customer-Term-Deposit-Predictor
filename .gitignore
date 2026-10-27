@@ -1,0 +1,12 @@
+
+# Python virtual environment
+venv/
+.venv/
+
+# Trained machine learning model
+bank_model.pkl
+
+# Python cache files
+__pycache__/
+*.pyc
+
